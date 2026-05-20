@@ -770,6 +770,1209 @@ const UNITS = [
 ];
 
 /* ──────────────────────────────────────────────────
+   STUDY MATERIAL CONTENT  (key = `${unitId}-${topicIdx}`)
+────────────────────────────────────────────────── */
+
+const CONTENT = {
+
+/* ═══ UNIT 0: CHEMISTRY — METALS ═══ */
+
+'0-0': `
+  <p class="mat-intro">The <strong>reactivity series</strong> ranks metals from most reactive (top) to least reactive (bottom). More reactive metals lose electrons more readily and react more vigorously.</p>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 260 310" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="reactGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F5907A"/>
+          <stop offset="50%" stop-color="#F5C97A"/>
+          <stop offset="100%" stop-color="#8DD98A"/>
+        </linearGradient>
+      </defs>
+      <!-- gradient bar -->
+      <rect x="60" y="14" width="22" height="282" rx="8" fill="url(#reactGrad)"/>
+      <!-- decreasing reactivity arrow -->
+      <line x1="20" y1="20" x2="20" y2="290" stroke="#C9A4E8" stroke-width="2"/>
+      <polygon points="14,282 26,282 20,296" fill="#C9A4E8"/>
+      <text x="12" y="160" font-size="8" fill="#7a5a9a" font-weight="bold" transform="rotate(-90 12,160)" text-anchor="middle">Decreasing reactivity</text>
+      <!-- metal names -->
+      <text x="92" y="26" font-size="9" font-weight="bold" fill="#4A3F55">Potassium (K)</text>
+      <text x="92" y="46" font-size="9" font-weight="bold" fill="#4A3F55">Sodium (Na)</text>
+      <text x="92" y="66" font-size="9" font-weight="bold" fill="#4A3F55">Calcium (Ca)</text>
+      <text x="92" y="86" font-size="9" fill="#4A3F55">Magnesium (Mg)</text>
+      <text x="92" y="106" font-size="9" fill="#4A3F55">Aluminium (Al)</text>
+      <text x="92" y="126" font-size="9" fill="#4A3F55">Zinc (Zn)</text>
+      <text x="92" y="146" font-size="9" fill="#4A3F55">Iron (Fe)</text>
+      <text x="92" y="166" font-size="9" fill="#4A3F55">Tin (Sn)</text>
+      <text x="92" y="186" font-size="9" fill="#4A3F55">Lead (Pb)</text>
+      <text x="92" y="206" font-size="9" font-style="italic" fill="#999">Hydrogen (H) — ref</text>
+      <text x="92" y="226" font-size="9" font-weight="bold" fill="#4A3F55">Copper (Cu)</text>
+      <text x="92" y="246" font-size="9" font-weight="bold" fill="#4A3F55">Silver (Ag)</text>
+      <text x="92" y="266" font-size="9" font-weight="bold" fill="#4A3F55">Gold (Au)</text>
+      <!-- brackets -->
+      <path d="M210,18 q6,0 6,6 v34 q0,6 6,6 q-6,0 -6,6 v34 q0,6 -6,6" fill="none" stroke="#E8A4C8" stroke-width="1.5"/>
+      <text x="224" y="62" font-size="7.5" fill="#c06090" font-weight="bold">Never found</text>
+      <text x="224" y="72" font-size="7.5" fill="#c06090" font-weight="bold">pure (K,Na,Ca)</text>
+      <path d="M210,218 q6,0 6,6 v14 q0,6 6,6 q-6,0 -6,6 v14 q0,6 -6,6" fill="none" stroke="#8DD98A" stroke-width="1.5"/>
+      <text x="224" y="244" font-size="7.5" fill="#3a8a3a" font-weight="bold">Found pure</text>
+      <text x="224" y="254" font-size="7.5" fill="#3a8a3a" font-weight="bold">(Cu,Ag,Au)</text>
+    </svg>
+  </div>
+
+  <div class="mnem-box">🧠 Mnemonic: <br>"Please Stop Calling Me A Zebra — I'm Totally Like Humans, Clearly Somewhat Gilded"<br><span style="font-style:normal;font-size:.74rem;color:#aa8a5a;">(Potassium, Sodium, Calcium, Magnesium, Aluminium, Zinc, Iron, Tin, Lead, Hydrogen, Copper, Silver, Gold)</span></div>
+
+  <div class="key-box">
+    <strong>Key facts:</strong>
+    <ul class="mat-list" style="color:inherit;margin-top:4px;">
+      <li>Most reactive metals react with cold water, steam, AND dilute acids</li>
+      <li>Least reactive (Au, Pt) don't react with anything under normal conditions</li>
+      <li>Reactivity = how easily a metal loses electrons</li>
+    </ul>
+  </div>
+
+  <div class="remember-box">💡 Remember: The higher a metal is in the series, the more reactive it is — and the harder it is to extract from its ore.</div>
+`,
+
+'0-1': `
+  <p class="mat-intro">Metals react in three main ways — with <strong>oxygen</strong>, with <strong>water or steam</strong>, and with <strong>dilute acids</strong>.</p>
+
+  <div class="mat-h">1️⃣ Reaction with Oxygen</div>
+  <div class="formula-display formula-sm">metal + oxygen → metal oxide</div>
+  <ul class="mat-list">
+    <li>Example: magnesium + oxygen → magnesium oxide</li>
+    <li>Observation: brilliant white flame, white ash</li>
+    <li>Heating provides the activation energy</li>
+  </ul>
+
+  <div class="mat-h">2️⃣ Reaction with Water / Steam</div>
+  <ul class="mat-list">
+    <li><strong>Cold water:</strong> metal + water → metal hydroxide + hydrogen <em>(only K, Na, Ca)</em></li>
+    <li><strong>Steam:</strong> metal + steam → metal oxide + hydrogen <em>(Mg, Fe react with steam, not cold water)</em></li>
+    <li>Key difference: Steam → oxide product; Cold water → hydroxide product</li>
+  </ul>
+
+  <div class="mat-h">3️⃣ Reaction with Dilute Acids</div>
+  <div class="formula-display formula-sm">metal + acid → salt + hydrogen</div>
+  <ul class="mat-list">
+    <li>Metals BELOW hydrogen (Cu, Ag, Au) do NOT react</li>
+    <li>Gas produced: hydrogen → test with a lit splint → "squeaky pop"</li>
+  </ul>
+
+  <table class="mat-table">
+    <tr><th>Reaction</th><th>Which metals</th><th>Word equation</th><th>Observation</th></tr>
+    <tr><td>With oxygen</td><td>Most metals</td><td>metal + oxygen → metal oxide</td><td>Bright flame / oxide layer</td></tr>
+    <tr><td>With water/steam</td><td>Cold: K,Na,Ca · Steam: Mg,Fe</td><td>metal + water → hydroxide + H₂</td><td>Fizzing, hydrogen gas</td></tr>
+    <tr><td>With acid</td><td>Above hydrogen only</td><td>metal + acid → salt + H₂</td><td>Bubbles of hydrogen</td></tr>
+  </table>
+
+  <div class="key-box"><strong>🔬 Hydrogen gas test:</strong> hold a lit splint to the gas. A <strong>"squeaky pop"</strong> confirms hydrogen.</div>
+
+  <div class="remember-box">💡 Remember: Metals below hydrogen in the reactivity series cannot displace hydrogen from acids — no reaction occurs.</div>
+`,
+
+'0-2': `
+  <p class="mat-intro">A <strong>displacement reaction</strong> happens when a MORE reactive metal pushes out (displaces) a LESS reactive metal from its compound.</p>
+
+  <div class="key-box"><strong>The rule:</strong> If Metal A is ABOVE Metal B in the reactivity series → A displaces B. If A is BELOW B → no reaction.</div>
+
+  <div class="mat-h">Example: Iron + Copper Sulfate</div>
+  <div class="two-col">
+    <div class="col-a"><h4>Before</h4>Blue solution (copper sulfate) + grey iron nail</div>
+    <div class="col-b"><h4>After</h4>Pale/colourless solution (iron sulfate) + pink-orange copper coating on the nail</div>
+  </div>
+  <div class="formula-display formula-sm">iron + copper sulfate → iron sulfate + copper</div>
+
+  <table class="mat-table">
+    <tr><th>Situation</th><th>Result</th></tr>
+    <tr><td>Iron + copper sulfate</td><td>✅ Reaction: copper metal appears</td></tr>
+    <tr><td>Copper + iron sulfate</td><td>❌ No reaction</td></tr>
+    <tr><td>Zinc + silver nitrate</td><td>✅ Reaction: silver metal appears</td></tr>
+  </table>
+
+  <div class="mat-h">Observable evidence</div>
+  <ul class="mat-list">
+    <li>Colour change in the solution</li>
+    <li>A solid metal deposit forms</li>
+    <li>Temperature increase (exothermic)</li>
+  </ul>
+
+  <div class="mat-h">At the particle level</div>
+  <ul class="mat-list">
+    <li>More reactive metal atoms LOSE electrons → form ions in solution</li>
+    <li>Less reactive metal IONS GAIN electrons → become solid atoms</li>
+  </ul>
+
+  <div class="remember-box">💡 Remember: More reactive = higher in the series = displaces less reactive metals from their salts.</div>
+`,
+
+'0-3': `
+  <p class="mat-intro">Salts form when the hydrogen ions in an acid are replaced by metal ions. There are <strong>3 main methods</strong>.</p>
+
+  <table class="mat-table">
+    <tr><th>Method</th><th>General equation</th><th>Gas?</th></tr>
+    <tr><td>Metal + Acid</td><td>metal + acid → salt + hydrogen</td><td>✅ Hydrogen</td></tr>
+    <tr><td>Metal oxide + Acid</td><td>metal oxide + acid → salt + water</td><td>❌ None</td></tr>
+    <tr><td>Metal carbonate + Acid</td><td>carbonate + acid → salt + water + CO₂</td><td>✅ CO₂</td></tr>
+  </table>
+
+  <div class="mat-h">Salt names depend on the acid</div>
+  <ul class="mat-list">
+    <li>Hydrochloric acid → <strong>chloride</strong> salts</li>
+    <li>Sulfuric acid → <strong>sulfate</strong> salts</li>
+    <li>Nitric acid → <strong>nitrate</strong> salts</li>
+  </ul>
+
+  <div class="key-box">
+    <strong>🔬 Gas tests:</strong><br>
+    <strong>HYDROGEN:</strong> hold a lit splint to the gas → "squeaky pop" = hydrogen confirmed.<br>
+    <strong>CO₂:</strong> bubble the gas through limewater → turns milky/cloudy = CO₂ confirmed.
+  </div>
+
+  <div class="mat-h">Crystallisation steps</div>
+  <div class="step-flow">
+    <div class="step-item"><span class="step-num">1</span><span>React the solid with the acid until the solid is in excess.</span></div>
+    <div class="step-item"><span class="step-num">2</span><span>Filter to remove unreacted solid (the liquid is the filtrate).</span></div>
+    <div class="step-item"><span class="step-num">3</span><span>Gently heat the filtrate to evaporate water.</span></div>
+    <div class="step-item"><span class="step-num">4</span><span>Cool the concentrated solution — crystals form.</span></div>
+    <div class="step-item"><span class="step-num">5</span><span>Filter again and dry the crystals gently.</span></div>
+  </div>
+
+  <div class="tip-box">✅ Tip: Crystallisation is PHYSICAL, not chemical — no new substance is made; the salt was already dissolved.</div>
+`,
+
+'0-4': `
+  <p class="mat-intro">In all chemical reactions, atoms are rearranged but <strong>never created or destroyed</strong>. This is the Law of Conservation of Mass.</p>
+
+  <div class="formula-display formula-sm">Total mass of reactants = Total mass of products</div>
+
+  <div class="mat-h">Why mass appears to change</div>
+  <ul class="mat-list">
+    <li><strong>Gas escapes</strong> (e.g. CO₂ leaving when carbonate + acid in an open container) → apparent DECREASE</li>
+    <li><strong>Metal reacts with oxygen from air</strong> (e.g. burning magnesium) → apparent INCREASE</li>
+    <li>In both cases mass IS conserved — some just moved out of or into the system.</li>
+  </ul>
+
+  <div class="mat-h">Balancing equations</div>
+  <table class="mat-table">
+    <tr><th>Unbalanced</th><th>Balanced</th></tr>
+    <tr><td>H₂ + O₂ → H₂O</td><td>2H₂ + O₂ → 2H₂O</td></tr>
+    <tr><td>Fe + O₂ → Fe₂O₃</td><td>4Fe + 3O₂ → 2Fe₂O₃</td></tr>
+    <tr><td>Ca + H₂O → Ca(OH)₂ + H₂</td><td>Ca + 2H₂O → Ca(OH)₂ + H₂</td></tr>
+  </table>
+
+  <div class="mat-h">Rules for balancing</div>
+  <ul class="mat-list">
+    <li>Count atoms of each element on both sides</li>
+    <li>Add coefficients (numbers in front) to balance — NEVER change the formulae</li>
+    <li>Balance one element at a time</li>
+  </ul>
+
+  <div class="remember-box">💡 Remember: Atoms are rearranged in reactions but never created or destroyed. The number of each type of atom must be equal on both sides.</div>
+`,
+
+'0-5': `
+  <p class="mat-intro">Chemical reactions either <strong>release</strong> energy to the surroundings (exothermic) or <strong>absorb</strong> energy from the surroundings (endothermic).</p>
+
+  <div class="two-col">
+    <div class="col-a">
+      <h4>🔥 EXOTHERMIC</h4>
+      Releases energy as heat (and sometimes light). Surroundings get <strong>WARMER</strong>.<br>
+      Examples: burning, neutralisation, displacement, respiration.<br>
+      Bond formation releases MORE energy than bond breaking absorbs.
+    </div>
+    <div class="col-b">
+      <h4>❄️ ENDOTHERMIC</h4>
+      Absorbs energy from the surroundings. Surroundings get <strong>COOLER</strong>.<br>
+      Examples: dissolving ammonium nitrate, photosynthesis, thermal decomposition.<br>
+      Bond breaking needs MORE energy than bond formation releases.
+    </div>
+  </div>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 140" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <line x1="34" y1="14" x2="34" y2="120" stroke="#999" stroke-width="1.5"/>
+      <line x1="34" y1="120" x2="270" y2="120" stroke="#999" stroke-width="1.5"/>
+      <text x="150" y="135" font-size="8" fill="#777" text-anchor="middle">Progress of reaction</text>
+      <text x="14" y="68" font-size="8" fill="#777" transform="rotate(-90 14,68)" text-anchor="middle">Energy</text>
+      <!-- exothermic: starts high, hump, ends lower -->
+      <path d="M40,46 Q90,46 120,28 Q150,10 180,96 Q210,108 264,108" fill="none" stroke="#F5907A" stroke-width="2.5"/>
+      <text x="200" y="86" font-size="8" fill="#d05a3a" font-weight="bold">Exothermic</text>
+      <!-- endothermic: starts low, hump, ends higher -->
+      <path d="M40,104 Q90,104 120,30 Q150,12 180,58 Q210,66 264,66" fill="none" stroke="#A4C9E8" stroke-width="2.5" stroke-dasharray="4 3"/>
+      <text x="196" y="50" font-size="8" fill="#4a7aaa" font-weight="bold">Endothermic</text>
+      <!-- activation energy annotation -->
+      <line x1="135" y1="16" x2="135" y2="104" stroke="#bbb" stroke-width="1" stroke-dasharray="2 2"/>
+      <text x="138" y="22" font-size="7" fill="#999">activation energy</text>
+    </svg>
+  </div>
+
+  <div class="remember-box">💡 Remember: <strong>Exo</strong> = exits (energy leaves) → feels HOT. <strong>Endo</strong> = enters (energy enters the reaction) → feels COLD. Container warm = exothermic. Container cold = endothermic.</div>
+`,
+
+/* ═══ UNIT 1: BIOLOGY — REPRODUCTION ═══ */
+
+'1-0': `
+  <p class="mat-intro">The male reproductive system produces <strong>sperm cells</strong> and delivers them into the female reproductive tract.</p>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 260 240" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <!-- sperm ducts -->
+      <path d="M70,150 Q70,90 110,80 L150,80" fill="none" stroke="#C9A4E8" stroke-width="5"/>
+      <path d="M190,150 Q190,90 150,80" fill="none" stroke="#C9A4E8" stroke-width="5"/>
+      <!-- prostate -->
+      <rect x="118" y="92" width="34" height="22" rx="6" fill="#E8A4C8"/>
+      <text x="135" y="107" font-size="7" fill="#fff" text-anchor="middle" font-weight="bold">Prostate</text>
+      <!-- urethra / penis -->
+      <rect x="128" y="112" width="14" height="86" rx="7" fill="#F5C97A"/>
+      <!-- testes -->
+      <ellipse cx="70" cy="168" rx="22" ry="26" fill="#A4D4C9"/>
+      <ellipse cx="190" cy="168" rx="22" ry="26" fill="#A4D4C9"/>
+      <!-- scrotum outline -->
+      <path d="M48,160 Q60,210 130,205 Q200,210 212,160 Q200,235 130,232 Q60,235 48,160Z" fill="#F5A050" opacity="0.25"/>
+      <!-- labels -->
+      <line x1="70" y1="168" x2="20" y2="168" stroke="#999" stroke-width="0.8"/>
+      <text x="2" y="171" font-size="8" fill="#555">Testis</text>
+      <line x1="80" y1="120" x2="30" y2="115" stroke="#999" stroke-width="0.8"/>
+      <text x="2" y="118" font-size="8" fill="#555">Sperm duct</text>
+      <line x1="135" y1="160" x2="200" y2="135" stroke="#999" stroke-width="0.8"/>
+      <text x="202" y="135" font-size="8" fill="#555">Urethra</text>
+      <line x1="135" y1="200" x2="200" y2="205" stroke="#999" stroke-width="0.8"/>
+      <text x="202" y="208" font-size="8" fill="#555">Penis</text>
+      <text x="120" y="228" font-size="7" fill="#a07020">Scrotum holds testes</text>
+    </svg>
+  </div>
+
+  <table class="mat-table">
+    <tr><th>Organ</th><th>Function</th></tr>
+    <tr><td>Testes</td><td>Produce sperm; held in scrotum at ~35°C (cooler than body)</td></tr>
+    <tr><td>Scrotum</td><td>Holds testes outside the body to keep them cooler</td></tr>
+    <tr><td>Sperm ducts (vas deferens)</td><td>Carry sperm from the testes</td></tr>
+    <tr><td>Seminal vesicle &amp; prostate</td><td>Produce fluid that nourishes and protects sperm</td></tr>
+    <tr><td>Urethra</td><td>Carries semen (or urine) out — never both at the same time</td></tr>
+    <tr><td>Penis</td><td>Transfers semen into the female reproductive system</td></tr>
+  </table>
+
+  <div class="key-box"><strong>Key:</strong> Semen = sperm cells + fluid from glands. A special muscle prevents urine and semen passing through the urethra at the same time.</div>
+
+  <div class="tip-box">✅ Tip: Testes are held OUTSIDE the body because sperm production needs ~35°C — lower than body temperature (37°C). Internal heat would damage sperm.</div>
+`,
+
+'1-1': `
+  <p class="mat-intro">The female reproductive system produces <strong>egg cells</strong> and is the site of fertilisation and foetal development.</p>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 260 220" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <!-- uterus -->
+      <path d="M110,60 Q130,40 150,60 Q168,100 130,150 Q92,100 110,60Z" fill="#E8A4C8"/>
+      <!-- oviducts -->
+      <path d="M110,62 Q70,40 48,60" fill="none" stroke="#C9A4E8" stroke-width="5"/>
+      <path d="M150,62 Q190,40 212,60" fill="none" stroke="#C9A4E8" stroke-width="5"/>
+      <!-- ovaries -->
+      <ellipse cx="44" cy="64" rx="16" ry="11" fill="#A4D4C9"/>
+      <ellipse cx="216" cy="64" rx="16" ry="11" fill="#A4D4C9"/>
+      <!-- cervix -->
+      <rect x="122" y="148" width="16" height="16" rx="3" fill="#C96aa0"/>
+      <!-- vagina -->
+      <rect x="120" y="162" width="20" height="46" rx="9" fill="#F5C97A"/>
+      <!-- labels -->
+      <line x1="44" y1="64" x2="20" y2="40" stroke="#999" stroke-width="0.8"/>
+      <text x="2" y="38" font-size="8" fill="#555">Ovary</text>
+      <line x1="80" y1="50" x2="60" y2="20" stroke="#999" stroke-width="0.8"/>
+      <text x="20" y="18" font-size="8" fill="#555">Oviduct</text>
+      <line x1="130" y1="100" x2="200" y2="120" stroke="#999" stroke-width="0.8"/>
+      <text x="202" y="123" font-size="8" fill="#555">Uterus</text>
+      <line x1="130" y1="156" x2="200" y2="160" stroke="#999" stroke-width="0.8"/>
+      <text x="202" y="163" font-size="8" fill="#555">Cervix</text>
+      <line x1="130" y1="190" x2="200" y2="195" stroke="#999" stroke-width="0.8"/>
+      <text x="202" y="198" font-size="8" fill="#555">Vagina</text>
+    </svg>
+  </div>
+
+  <table class="mat-table">
+    <tr><th>Organ</th><th>Function</th></tr>
+    <tr><td>Ovaries</td><td>Contain and release egg cells (females are born with all ~1–2 million)</td></tr>
+    <tr><td>Oviducts (Fallopian tubes)</td><td>Connect ovaries to uterus; cilia move the egg; fertilisation occurs here</td></tr>
+    <tr><td>Uterus</td><td>Muscular organ where a fertilised egg implants and the foetus develops</td></tr>
+    <tr><td>Cervix</td><td>Strong muscle at the lower end of the uterus; dilates during birth</td></tr>
+    <tr><td>Vagina</td><td>Birth canal; receives semen during intercourse</td></tr>
+  </table>
+
+  <div class="key-box"><strong>Key fact:</strong> Unlike males, who produce sperm continuously, females are BORN with all the egg cells they will ever have. No new eggs are made after birth.</div>
+
+  <div class="remember-box">💡 Remember: Fertilisation happens in the OVIDUCT (not the uterus). The egg is released from the ovary and fertilised as it travels toward the uterus.</div>
+`,
+
+'1-2': `
+  <p class="mat-intro">The menstrual cycle is a monthly (~28 day) cycle of egg development, release, and uterus-lining renewal, controlled by hormones.</p>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 300 110" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="44" width="48" height="20" fill="#E8A4C8"/>
+      <rect x="68" y="44" width="100" height="20" fill="#F5C97A"/>
+      <rect x="184" y="44" width="92" height="20" fill="#C9A4E8"/>
+      <circle cx="176" cy="54" r="9" fill="#F5907A"/>
+      <line x1="20" y1="64" x2="276" y2="64" stroke="#999" stroke-width="1"/>
+      <text x="20" y="80" font-size="7" fill="#777">Day 1</text>
+      <text x="160" y="80" font-size="7" fill="#777">Day 14</text>
+      <text x="256" y="80" font-size="7" fill="#777">Day 28</text>
+      <text x="44" y="38" font-size="6.5" fill="#c06090" text-anchor="middle" font-weight="bold">Period</text>
+      <text x="118" y="38" font-size="6.5" fill="#a87020" text-anchor="middle" font-weight="bold">Rebuild</text>
+      <text x="176" y="30" font-size="6.5" fill="#d05a3a" text-anchor="middle" font-weight="bold">Ovulation</text>
+      <text x="230" y="38" font-size="6.5" fill="#7a5a9a" text-anchor="middle" font-weight="bold">Prepare</text>
+    </svg>
+  </div>
+
+  <table class="mat-table">
+    <tr><th>Days</th><th>Phase</th><th>What happens</th></tr>
+    <tr><td>1–5</td><td>Menstruation</td><td>Uterus lining breaks down and leaves the body</td></tr>
+    <tr><td>6–13</td><td>Repair &amp; rebuild</td><td>Lining rebuilds; egg matures in ovary</td></tr>
+    <tr><td>~14</td><td>Ovulation</td><td>Mature egg released from ovary into oviduct</td></tr>
+    <tr><td>15–28</td><td>Preparation</td><td>Lining thickens, ready for possible implantation</td></tr>
+  </table>
+
+  <ul class="mat-list">
+    <li>If the egg is NOT fertilised → cycle restarts from Day 1.</li>
+    <li>If the egg IS fertilised → pregnancy begins and the cycle STOPS.</li>
+    <li>Menopause (~age 45–50): eggs run out → the cycle ends permanently.</li>
+  </ul>
+
+  <div class="remember-box">💡 Remember: Ovulation occurs on about Day 14. This is when fertilisation is most likely if sperm are present in the oviduct.</div>
+`,
+
+'1-3': `
+  <p class="mat-intro"><strong>Fertilisation</strong> is the fusion of a sperm nucleus with an egg nucleus to form a <strong>zygote</strong> — the very first cell of a new organism.</p>
+
+  <div class="step-flow">
+    <div class="step-item"><span class="step-num">1</span><span>During intercourse, ~200–300 million sperm enter the vagina.</span></div>
+    <div class="step-item"><span class="step-num">2</span><span>Sperm swim through the cervix → into the uterus → up into the oviducts.</span></div>
+    <div class="step-item"><span class="step-num">3</span><span>If an egg is present in the oviduct, many sperm reach it.</span></div>
+    <div class="step-item"><span class="step-num">4</span><span>The acrosome (cap on the sperm head) releases enzymes to break through the egg's jelly coat.</span></div>
+    <div class="step-item"><span class="step-num">5</span><span>ONE sperm enters → a membrane instantly forms, blocking all other sperm.</span></div>
+    <div class="step-item"><span class="step-num">6</span><span>Sperm nucleus fuses with egg nucleus → ZYGOTE (46 chromosomes, 23 from each parent).</span></div>
+    <div class="step-item"><span class="step-num">7</span><span>Fertilisation occurs in the OVIDUCT.</span></div>
+  </div>
+
+  <table class="mat-table">
+    <tr><th>Feature</th><th>Sperm</th><th>Egg</th></tr>
+    <tr><td>Made in</td><td>Testes</td><td>Ovaries</td></tr>
+    <tr><td>Size</td><td>Very small</td><td>Much larger</td></tr>
+    <tr><td>Movement</td><td>Tail (flagellum)</td><td>Moved by cilia in oviduct</td></tr>
+    <tr><td>Special structure</td><td>Acrosome (enzyme cap)</td><td>Jelly coat</td></tr>
+    <tr><td>Chromosomes</td><td>23 (X or Y)</td><td>23 (always X)</td></tr>
+  </table>
+
+  <div class="remember-box">💡 Remember: Fertilisation happens in the OVIDUCT. The zygote has 46 chromosomes (23 + 23). Only ONE sperm can fertilise one egg.</div>
+`,
+
+'1-4': `
+  <p class="mat-intro">After fertilisation, the zygote divides repeatedly as it travels to the uterus, implants, and develops into an embryo then a foetus.</p>
+
+  <div class="step-flow">
+    <div class="step-item"><span class="step-num">1</span><span>Day 0 — Zygote (1 cell, 46 chromosomes) begins dividing by mitosis.</span></div>
+    <div class="step-item"><span class="step-num">2</span><span>Day 7 — Ball of cells (embryo) reaches the uterus → IMPLANTATION into the lining.</span></div>
+    <div class="step-item"><span class="step-num">3</span><span>Weeks 1–10 — Embryo receives nutrients from blood vessels in the uterus lining.</span></div>
+    <div class="step-item"><span class="step-num">4</span><span>Week 10+ — Now called a FOETUS; placenta fully functional.</span></div>
+    <div class="step-item"><span class="step-num">5</span><span>Week 40 — Birth (about 9 months).</span></div>
+  </div>
+
+  <div class="mat-h">The Placenta</div>
+  <ul class="mat-list">
+    <li>Formed from the outer cells of the embryo; attached to the uterus wall</li>
+    <li>Connected to the foetus by the UMBILICAL CORD</li>
+    <li>Mother's and foetus's blood DO NOT MIX — substances exchange across thin membranes</li>
+  </ul>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 130" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="20" x2="270" y2="20" stroke="#F5907A" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="140" y="14" font-size="8" fill="#d05a3a" text-anchor="middle" font-weight="bold">Blood does NOT mix</text>
+      <rect x="12" y="36" width="74" height="70" rx="10" fill="#F5907A" opacity="0.5"/>
+      <text x="49" y="76" font-size="8.5" fill="#7a2a1e" text-anchor="middle" font-weight="bold">Mother's<br/>blood</text>
+      <path d="M118,36 q-8,12 0,24 q8,12 0,24 q-8,12 0,22" fill="none" stroke="#C9A4E8" stroke-width="3"/>
+      <text x="140" y="118" font-size="8" fill="#7a5a9a" text-anchor="middle" font-weight="bold">Placenta</text>
+      <rect x="194" y="36" width="74" height="70" rx="10" fill="#A4D4C9" opacity="0.6"/>
+      <text x="231" y="76" font-size="8.5" fill="#2a5a3a" text-anchor="middle" font-weight="bold">Foetus</text>
+      <line x1="90" y1="50" x2="190" y2="50" stroke="#3a8a3a" stroke-width="1"/>
+      <polygon points="190,46 198,50 190,54" fill="#3a8a3a"/>
+      <text x="140" y="46" font-size="6.5" fill="#3a8a3a" text-anchor="middle">Glucose, O₂, nutrients →</text>
+      <line x1="190" y1="92" x2="90" y2="92" stroke="#d05a3a" stroke-width="1"/>
+      <polygon points="90,88 82,92 90,96" fill="#d05a3a"/>
+      <text x="140" y="100" font-size="6.5" fill="#d05a3a" text-anchor="middle">← CO₂, urea</text>
+    </svg>
+  </div>
+
+  <div class="key-box"><strong>Amniotic fluid:</strong> the foetus develops inside the amnion, a bag of amniotic fluid that cushions, protects, and allows movement.</div>
+
+  <div class="remember-box">💡 Remember: The placenta lets nutrients and oxygen pass from mother to foetus, and waste (CO₂, urea) pass back — WITHOUT the blood mixing.</div>
+`,
+
+'1-5': `
+  <p class="mat-intro">Both alcohol and tobacco pass through the placenta into foetal blood, where they can cause serious, sometimes permanent harm.</p>
+
+  <div class="mat-h">🚬 Tobacco / Smoking</div>
+  <ul class="mat-list">
+    <li>Carbon monoxide (CO) binds to haemoglobin INSTEAD of oxygen → less oxygen reaches the foetus → slower growth</li>
+    <li>Nicotine narrows blood vessels → raises blood pressure → may harm developing nerve cells</li>
+    <li>Risks: low birth weight, breathing problems, increased risk of miscarriage</li>
+  </ul>
+
+  <div class="mat-h">🍷 Alcohol</div>
+  <ul class="mat-list">
+    <li>Dissolves in blood and passes easily through the placenta</li>
+    <li>Even small amounts can damage developing brain cells</li>
+    <li>Large amounts → Foetal Alcohol Syndrome (FAS)</li>
+    <li>FAS: permanent nervous-system damage, growth problems, behavioural issues</li>
+    <li>SAFE AMOUNT = ZERO — pregnant women should avoid alcohol completely</li>
+  </ul>
+
+  <table class="mat-table">
+    <tr><th></th><th>Tobacco</th><th>Alcohol</th></tr>
+    <tr><td>Harmful substance</td><td>Carbon monoxide, nicotine</td><td>Ethanol</td></tr>
+    <tr><td>Main harm</td><td>Reduced oxygen, nerve damage</td><td>Brain damage, FAS</td></tr>
+    <tr><td>Main risk</td><td>Low birth weight</td><td>Foetal Alcohol Syndrome</td></tr>
+    <tr><td>Safe amount</td><td>None</td><td>None</td></tr>
+  </table>
+
+  <div class="remember-box">💡 Remember: Both alcohol and carbon monoxide pass through the placenta. Alcohol damages the developing brain; carbon monoxide reduces oxygen supply. Neither is safe in any amount.</div>
+`,
+
+/* ═══ UNIT 2: PHYSICS — SOUND ═══ */
+
+'2-0': `
+  <p class="mat-intro">Sound is energy transferred by the <strong>vibration of particles</strong> in a medium (solid, liquid, or gas). Unlike light, sound CANNOT travel through a vacuum — there are no particles to vibrate.</p>
+
+  <div class="mat-h">Key properties</div>
+  <ul class="mat-list">
+    <li>Sound REQUIRES a medium (something with particles)</li>
+    <li>Sound waves are LONGITUDINAL — particles vibrate parallel to the direction of travel</li>
+    <li>The particles don't travel — they pass energy on like a "Mexican wave"</li>
+    <li>Sound spreads out in all directions from the source</li>
+  </ul>
+
+  <div class="mat-h">🔔 Bell jar demonstration</div>
+  <ul class="mat-list">
+    <li>Ring an alarm inside a sealed glass jar</li>
+    <li>Pump out the air → sound gets quieter and eventually disappears</li>
+    <li>Let air back in → sound returns</li>
+    <li>Conclusion: sound needs air (particles) to travel</li>
+  </ul>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="36" width="22" height="28" rx="4" fill="#C9A4E8"/>
+      <polygon points="28,40 44,30 44,70 28,60" fill="#C9A4E8"/>
+      <text x="20" y="80" font-size="7" fill="#777" text-anchor="middle">Source</text>
+      <g fill="#E8A4C8">
+        <circle cx="64" cy="50" r="3"/><circle cx="70" cy="44" r="3"/><circle cx="70" cy="56" r="3"/>
+        <circle cx="92" cy="50" r="3"/><circle cx="100" cy="50" r="3"/>
+        <circle cx="124" cy="46" r="3"/><circle cx="124" cy="54" r="3"/><circle cx="132" cy="50" r="3"/>
+        <circle cx="156" cy="50" r="3"/>
+      </g>
+      <text x="78" y="32" font-size="7" fill="#c06090" text-anchor="middle">C</text>
+      <text x="106" y="32" font-size="7" fill="#c06090" text-anchor="middle">R</text>
+      <line x1="178" y1="20" x2="178" y2="80" stroke="#999" stroke-width="1" stroke-dasharray="3 2"/>
+      <rect x="180" y="20" width="94" height="60" fill="#eee" opacity="0.5"/>
+      <text x="227" y="46" font-size="8" fill="#999" text-anchor="middle">VACUUM</text>
+      <text x="227" y="60" font-size="9" fill="#d05a3a" text-anchor="middle" font-weight="bold">✕ sound stops</text>
+    </svg>
+  </div>
+
+  <div class="remember-box">💡 Remember: Sound CANNOT travel through a vacuum — there are no particles to vibrate and pass on the energy. This is why space is completely silent.</div>
+
+  <div class="tip-box">✅ Tip: Sound is a LONGITUDINAL wave — particles vibrate PARALLEL (back-and-forth) to the direction of travel. Light is transverse (particles vibrate perpendicular).</div>
+`,
+
+'2-1': `
+  <p class="mat-intro">Sound moves through a medium by creating alternating regions of high pressure (<strong>compressions</strong>) and low pressure (<strong>rarefactions</strong>).</p>
+
+  <ul class="mat-list">
+    <li><strong>COMPRESSION:</strong> particles PUSHED TOGETHER → high pressure, high density</li>
+    <li><strong>RAREFACTION:</strong> particles SPREAD APART → low pressure, low density</li>
+  </ul>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 300 120" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#C9A4E8">
+        <circle cx="20" cy="60" r="3"/><circle cx="28" cy="54" r="3"/><circle cx="28" cy="66" r="3"/><circle cx="34" cy="60" r="3"/>
+        <circle cx="70" cy="60" r="3"/><circle cx="90" cy="60" r="3"/>
+        <circle cx="120" cy="60" r="3"/><circle cx="128" cy="54" r="3"/><circle cx="128" cy="66" r="3"/><circle cx="134" cy="60" r="3"/>
+        <circle cx="170" cy="60" r="3"/><circle cx="190" cy="60" r="3"/>
+        <circle cx="220" cy="60" r="3"/><circle cx="228" cy="54" r="3"/><circle cx="228" cy="66" r="3"/><circle cx="234" cy="60" r="3"/>
+        <circle cx="270" cy="60" r="3"/><circle cx="288" cy="60" r="3"/>
+      </g>
+      <text x="28" y="38" font-size="7.5" fill="#7a5a9a" text-anchor="middle" font-weight="bold">Compression</text>
+      <text x="80" y="38" font-size="7.5" fill="#888" text-anchor="middle">Rarefaction</text>
+      <line x1="240" y1="14" x2="288" y2="14" stroke="#777" stroke-width="1"/>
+      <polygon points="288,10 296,14 288,18" fill="#777"/>
+      <text x="250" y="10" font-size="6.5" fill="#777">wave →</text>
+      <line x1="120" y1="100" x2="180" y2="100" stroke="#E8A4C8" stroke-width="1"/>
+      <polygon points="120,96 112,100 120,104" fill="#E8A4C8"/>
+      <polygon points="180,96 188,100 180,104" fill="#E8A4C8"/>
+      <text x="150" y="114" font-size="6.5" fill="#c06090" text-anchor="middle">particles vibrate ↔</text>
+    </svg>
+  </div>
+
+  <div class="mat-h">How sound travels</div>
+  <div class="step-flow">
+    <div class="step-item"><span class="step-num">1</span><span>Source vibrates → pushes nearby particles together (compression).</span></div>
+    <div class="step-item"><span class="step-num">2</span><span>These particles push the NEXT particles → compression moves forward.</span></div>
+    <div class="step-item"><span class="step-num">3</span><span>Particles spring back, creating a rarefaction.</span></div>
+    <div class="step-item"><span class="step-num">4</span><span>This alternating pattern travels outward as a wave.</span></div>
+  </div>
+
+  <div class="remember-box">💡 Remember: In a compression, particles are pushed together (HIGH pressure). In a rarefaction, they spread apart (LOW pressure). The wave alternates between the two.</div>
+`,
+
+'2-2': `
+  <p class="mat-intro">Two key properties of a sound wave — <strong>amplitude</strong> (loudness) and <strong>frequency</strong> (pitch) — can be seen on an oscilloscope waveform.</p>
+
+  <div class="mat-h">AMPLITUDE</div>
+  <ul class="mat-list">
+    <li>Maximum displacement of particles from their rest position</li>
+    <li>Shown as the HEIGHT of the wave on an oscilloscope</li>
+    <li>Greater amplitude = more energy = LOUDER sound</li>
+    <li>Unit: Decibels (dB)</li>
+  </ul>
+
+  <div class="mat-h">FREQUENCY</div>
+  <ul class="mat-list">
+    <li>Number of complete vibrations (cycles) per second</li>
+    <li>Shown as how CLOSE TOGETHER the waves are</li>
+    <li>Higher frequency = higher pitch; lower frequency = lower pitch</li>
+    <li>Unit: Hertz (Hz) — 1 Hz = 1 vibration per second</li>
+  </ul>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 180" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8,45 q15,-25 30,0 t30,0 t30,0" fill="none" stroke="#C9A4E8" stroke-width="2"/>
+      <text x="68" y="78" font-size="7" fill="#777" text-anchor="middle">Normal</text>
+      <path d="M150,45 q15,-38 30,0 t30,0 t30,0" fill="none" stroke="#E8A4C8" stroke-width="2"/>
+      <text x="210" y="78" font-size="7" fill="#c06090" text-anchor="middle">Taller → LOUDER</text>
+      <path d="M8,135 q7.5,-25 15,0 t15,0 t15,0 t15,0 t15,0 t15,0" fill="none" stroke="#A4D4C9" stroke-width="2"/>
+      <text x="68" y="168" font-size="7" fill="#3a8a3a" text-anchor="middle">Closer → HIGH PITCH</text>
+      <path d="M150,135 q15,-12 30,0 t30,0 t30,0" fill="none" stroke="#F5C97A" stroke-width="2"/>
+      <text x="210" y="168" font-size="7" fill="#a87020" text-anchor="middle">Shorter → QUIETER</text>
+    </svg>
+  </div>
+
+  <table class="mat-table">
+    <tr><th>What you see</th><th>What it means</th></tr>
+    <tr><td>Taller peaks</td><td>Greater amplitude → louder</td></tr>
+    <tr><td>Shorter peaks</td><td>Smaller amplitude → quieter</td></tr>
+    <tr><td>Waves closer together</td><td>Higher frequency → higher pitch</td></tr>
+    <tr><td>Waves further apart</td><td>Lower frequency → lower pitch</td></tr>
+  </table>
+
+  <div class="remember-box">💡 Remember: Amplitude → loudness → HEIGHT of wave. Frequency → pitch → SPACING of waves. They're independent: you can have a loud high note or a quiet low note.</div>
+`,
+
+'2-3': `
+  <p class="mat-intro">Sound travels at different speeds depending on the medium. The denser and more tightly packed the particles, the faster sound can travel.</p>
+
+  <div class="mat-h">Speed values</div>
+  <ul class="mat-list">
+    <li>Air: ~340 m/s</li>
+    <li>Water: ~1,500 m/s</li>
+    <li>Steel: ~5,000 m/s</li>
+  </ul>
+
+  <div class="key-box"><strong>Rule:</strong> Solids &gt; Liquids &gt; Gases (fastest to slowest). In solids, particles are very close together — vibrations pass on almost instantly. In gases, particles are far apart — more time passes before the next is hit.</div>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 110" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <line x1="50" y1="14" x2="50" y2="92" stroke="#999" stroke-width="1"/>
+      <rect x="50" y="20" width="210" height="18" rx="3" fill="#3a5a9a"/>
+      <text x="262" y="33" font-size="8" fill="#3a5a9a" font-weight="bold">5000</text>
+      <text x="46" y="33" font-size="7.5" fill="#555" text-anchor="end">Steel</text>
+      <rect x="50" y="46" width="63" height="18" rx="3" fill="#5a8ad0"/>
+      <text x="116" y="59" font-size="8" fill="#3a5a9a" font-weight="bold">1500</text>
+      <text x="46" y="59" font-size="7.5" fill="#555" text-anchor="end">Water</text>
+      <rect x="50" y="72" width="15" height="18" rx="3" fill="#a4c9e8"/>
+      <text x="68" y="85" font-size="8" fill="#3a5a9a" font-weight="bold">340</text>
+      <text x="46" y="85" font-size="7.5" fill="#555" text-anchor="end">Air</text>
+      <text x="150" y="105" font-size="7" fill="#777" text-anchor="middle">Speed (m/s)  0 → 5500</text>
+    </svg>
+  </div>
+
+  <div class="tip-box">✅ Analogy: Passing a message along a row of people. Standing very close (solid) → message reaches the end almost instantly. Spread far apart (gas) → it takes much longer.</div>
+
+  <div class="remember-box">💡 Remember: Sound is FASTEST in solids and SLOWEST in gases, because particles are closest together in solids — energy transfers almost instantly.</div>
+`,
+
+'2-4': `
+  <p class="mat-intro">When two sound waves meet at the same point they <strong>interfere</strong>. The result depends on whether their peaks and troughs align.</p>
+
+  <div class="two-col">
+    <div class="col-a">
+      <h4>➕ CONSTRUCTIVE</h4>
+      Peaks align (compressions meet compressions). Amplitudes ADD → LOUDER. Result: bigger amplitude.
+    </div>
+    <div class="col-b">
+      <h4>➖ DESTRUCTIVE</h4>
+      Peak of one meets trough of the other. Amplitudes CANCEL → QUIETER/SILENT. Result: smaller or zero amplitude.
+    </div>
+  </div>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 160" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8,30 q15,-16 30,0 t30,0" fill="none" stroke="#C9A4E8" stroke-width="1.8"/>
+      <path d="M8,38 q15,-16 30,0 t30,0" fill="none" stroke="#E8A4C8" stroke-width="1.8"/>
+      <text x="78" y="38" font-size="9" fill="#777">+</text>
+      <path d="M92,34 q15,-30 30,0 t30,0" fill="none" stroke="#8DD98A" stroke-width="2.2"/>
+      <text x="210" y="34" font-size="8" fill="#3a8a3a" font-weight="bold">Constructive = LOUDER</text>
+      <path d="M8,100 q15,-16 30,0 t30,0" fill="none" stroke="#C9A4E8" stroke-width="1.8"/>
+      <path d="M8,100 q15,16 30,0 t30,0" fill="none" stroke="#E8A4C8" stroke-width="1.8"/>
+      <text x="78" y="104" font-size="9" fill="#777">+</text>
+      <line x1="92" y1="100" x2="152" y2="100" stroke="#F5907A" stroke-width="2.2"/>
+      <text x="210" y="104" font-size="8" fill="#d05a3a" font-weight="bold">Destructive = SILENT</text>
+    </svg>
+  </div>
+
+  <div class="mat-h">Real-world applications</div>
+  <ul class="mat-list">
+    <li><strong>Concert halls:</strong> reflected waves interfere → some spots louder, some "dead zones"</li>
+    <li><strong>Noise-cancelling headphones:</strong> generate an exact mirror-image wave → destructive interference cancels the noise</li>
+  </ul>
+
+  <div class="mat-h">How noise cancelling works</div>
+  <div class="step-flow">
+    <div class="step-item"><span class="step-num">1</span><span>Microphone detects the incoming noise wave.</span></div>
+    <div class="step-item"><span class="step-num">2</span><span>Electronics generate the "mirror image" (inverted) wave in real time.</span></div>
+    <div class="step-item"><span class="step-num">3</span><span>The mirror wave is played through the headphone speaker.</span></div>
+    <div class="step-item"><span class="step-num">4</span><span>Original + mirror = destructive interference → noise cancelled!</span></div>
+  </div>
+
+  <div class="remember-box">💡 Remember: Constructive = waves add up → louder. Destructive = waves cancel → quieter/silent. Noise-cancelling headphones use destructive interference.</div>
+`,
+
+'2-5': `
+  <p class="mat-intro">All sounds are produced by <strong>vibrating objects</strong>. Instruments are designed to create controlled vibrations that produce musical sounds.</p>
+
+  <table class="mat-table">
+    <tr><th>Type</th><th>What vibrates</th><th>Changing pitch</th><th>Examples</th></tr>
+    <tr><td>String</td><td>Strings vibrate; disturb the air</td><td>Tighter/shorter = higher; longer = lower</td><td>Guitar, violin, piano</td></tr>
+    <tr><td>Wind</td><td>Air column inside</td><td>Shorter column = higher; longer = lower</td><td>Trumpet, flute, clarinet</td></tr>
+    <tr><td>Percussion</td><td>Membrane / solid object</td><td>Tighter membrane = higher</td><td>Drum, xylophone, cymbal</td></tr>
+  </table>
+
+  <div class="mat-h">Guitar string example</div>
+  <div class="step-flow">
+    <div class="step-item"><span class="step-num">1</span><span>String is plucked → string vibrates back and forth.</span></div>
+    <div class="step-item"><span class="step-num">2</span><span>Vibrating string pushes air particles → creates compressions and rarefactions.</span></div>
+    <div class="step-item"><span class="step-num">3</span><span>Sound wave travels outward in all directions.</span></div>
+    <div class="step-item"><span class="step-num">4</span><span>The hollow body of the guitar amplifies the vibrations.</span></div>
+  </div>
+
+  <div class="key-box"><strong>Key fact:</strong> The sound energy comes from the VIBRATING OBJECT. The surrounding air particles don't create the sound — they transmit it.</div>
+
+  <div class="remember-box">💡 Remember: Every sound is caused by a VIBRATING OBJECT. Always identify WHAT is vibrating. Guitar = strings. Flute = air column. Drum = membrane (skin).</div>
+`,
+
+/* ═══ UNIT 3: PHYSICS — ELECTRICITY ═══ */
+
+'3-0': `
+  <p class="mat-intro">Three key quantities describe what happens in any circuit: <strong>current</strong>, <strong>voltage</strong>, and <strong>resistance</strong>.</p>
+
+  <div class="two-col">
+    <div class="col-a">
+      <h4>⚡ CURRENT (I)</h4>
+      Flow of charged particles (electrons). Unit: Amperes (A). Measured by an AMMETER → in SERIES. Needs a complete circuit.
+    </div>
+    <div class="col-b">
+      <h4>🔋 VOLTAGE (V)</h4>
+      "Push" that drives electrons (energy per charge). Unit: Volts (V). Measured by a VOLTMETER → in PARALLEL. Higher V = more current.
+    </div>
+  </div>
+  <div class="two-col">
+    <div class="col-a">
+      <h4>🔧 RESISTANCE (R)</h4>
+      How much a component opposes current. Unit: Ohms (Ω). Measured by an ohmmeter. Greater R = less current for the same voltage.
+    </div>
+  </div>
+
+  <table class="mat-table">
+    <tr><th>Factor</th><th>Effect on resistance</th></tr>
+    <tr><td>Longer wire</td><td>↑ Increases</td></tr>
+    <tr><td>Thicker wire</td><td>↓ Decreases</td></tr>
+    <tr><td>Material type</td><td>Varies (nichrome &gt; copper)</td></tr>
+    <tr><td>Higher temperature</td><td>↑ Usually increases</td></tr>
+  </table>
+
+  <div class="tip-box">✅ Analogy: Current = water flow, voltage = water pressure, resistance = narrowness of the pipe. More pressure = more flow. Narrower pipe = less flow.</div>
+
+  <div class="remember-box">💡 Remember: AMMETER measures current → in SERIES. VOLTMETER measures voltage → in PARALLEL. Getting this wrong can damage equipment!</div>
+`,
+
+'3-1': `
+  <p class="mat-intro"><strong>Ohm's Law</strong> is the fundamental relationship between voltage, current, and resistance. It lets you find any one if you know the other two.</p>
+
+  <div class="formula-display">V = I × R</div>
+  <p class="mat-intro">V = Voltage (Volts, V) · I = Current (Amperes, A) · R = Resistance (Ohms, Ω)</p>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 200 160" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="100,14 178,140 22,140" fill="#f0e8ff" stroke="#C9A4E8" stroke-width="2"/>
+      <line x1="48" y1="84" x2="152" y2="84" stroke="#C9A4E8" stroke-width="2"/>
+      <text x="100" y="62" font-size="26" fill="#4A3F55" text-anchor="middle" font-weight="900">V</text>
+      <text x="72" y="124" font-size="22" fill="#4A3F55" text-anchor="middle" font-weight="900">I</text>
+      <text x="100" y="118" font-size="16" fill="#999" text-anchor="middle">×</text>
+      <text x="128" y="124" font-size="22" fill="#4A3F55" text-anchor="middle" font-weight="900">R</text>
+    </svg>
+  </div>
+  <p class="mat-intro txt-center">Cover what you want to find → the other two show what to do.</p>
+
+  <table class="mat-table">
+    <tr><th>To find</th><th>Formula</th><th>Operation</th></tr>
+    <tr><td>Voltage</td><td>V = I × R</td><td>multiply current × resistance</td></tr>
+    <tr><td>Current</td><td>I = V ÷ R</td><td>divide voltage by resistance</td></tr>
+    <tr><td>Resistance</td><td>R = V ÷ I</td><td>divide voltage by current</td></tr>
+  </table>
+
+  <div class="mat-h">Worked examples</div>
+  <ul class="mat-list">
+    <li>R = 10Ω, V = 5V → I = V÷R = 5÷10 = <strong>0.5 A</strong></li>
+    <li>I = 2A, R = 6Ω → V = I×R = 2×6 = <strong>12 V</strong></li>
+    <li>V = 9V, I = 3A → R = V÷I = 9÷3 = <strong>3 Ω</strong></li>
+  </ul>
+
+  <div class="remember-box">💡 Remember: Cover what you want on the triangle. V on top, I×R on the bottom. Side by side = multiply. Above/below = divide.</div>
+`,
+
+'3-2': `
+  <p class="mat-intro">In a <strong>series circuit</strong>, all components are connected in a single loop. There is only ONE path for current.</p>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 140" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="24" width="220" height="92" fill="none" stroke="#777" stroke-width="2"/>
+      <!-- battery left -->
+      <line x1="30" y1="60" x2="30" y2="50" stroke="#777" stroke-width="2"/>
+      <line x1="24" y1="60" x2="36" y2="60" stroke="#4A3F55" stroke-width="4"/>
+      <line x1="27" y1="70" x2="33" y2="70" stroke="#4A3F55" stroke-width="2"/>
+      <text x="6" y="68" font-size="7" fill="#555">Cell</text>
+      <!-- resistors top -->
+      <rect x="90" y="18" width="34" height="12" fill="#fff" stroke="#777" stroke-width="2"/>
+      <text x="107" y="14" font-size="6.5" fill="#555" text-anchor="middle">R₁</text>
+      <rect x="166" y="18" width="34" height="12" fill="#fff" stroke="#777" stroke-width="2"/>
+      <text x="183" y="14" font-size="6.5" fill="#555" text-anchor="middle">R₂</text>
+      <!-- ammeter bottom -->
+      <circle cx="140" cy="116" r="11" fill="#fff" stroke="#777" stroke-width="2"/>
+      <text x="140" y="120" font-size="9" fill="#4A3F55" text-anchor="middle" font-weight="bold">A</text>
+      <!-- current arrow -->
+      <polygon points="60,24 54,20 54,28" fill="#E8A4C8"/>
+      <text x="50" y="46" font-size="6.5" fill="#c06090">current</text>
+    </svg>
+  </div>
+
+  <table class="mat-table">
+    <tr><th>Quantity</th><th>Rule in series</th></tr>
+    <tr><td>Current</td><td>SAME throughout (I₁ = I₂ = I₃)</td></tr>
+    <tr><td>Voltage</td><td>SHARED (V_total = V₁ + V₂ + V₃)</td></tr>
+    <tr><td>Resistance</td><td>ADDS UP (R_total = R₁ + R₂ + R₃)</td></tr>
+  </table>
+
+  <ul class="mat-list">
+    <li>More components in series → more total resistance → less current → bulbs dimmer</li>
+    <li>If ONE component fails (open circuit) → the WHOLE circuit stops</li>
+  </ul>
+
+  <div class="key-box"><strong>Worked example:</strong> 12V battery, R₁=2Ω, R₂=3Ω, R₃=5Ω.<br>Total R = 2+3+5 = 10Ω → Current = 12÷10 = 1.2A → Voltage across R₃ = 1.2×5 = 6V.</div>
+
+  <div class="remember-box">💡 Remember: Series = single loop. Same current EVERYWHERE. Voltage SHARED. If one bulb fails → ALL go out (like old fairy lights!).</div>
+`,
+
+'3-3': `
+  <p class="mat-intro">In a <strong>parallel circuit</strong>, components sit in separate branches. Each branch has its own path — they work independently.</p>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 160" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <!-- battery -->
+      <line x1="20" y1="80" x2="20" y2="70" stroke="#777" stroke-width="2"/>
+      <line x1="14" y1="80" x2="26" y2="80" stroke="#4A3F55" stroke-width="4"/>
+      <line x1="17" y1="90" x2="23" y2="90" stroke="#4A3F55" stroke-width="2"/>
+      <line x1="20" y1="30" x2="20" y2="64" stroke="#777" stroke-width="2"/>
+      <line x1="20" y1="96" x2="20" y2="130" stroke="#777" stroke-width="2"/>
+      <!-- top and bottom rails -->
+      <line x1="20" y1="30" x2="240" y2="30" stroke="#777" stroke-width="2"/>
+      <line x1="20" y1="130" x2="240" y2="130" stroke="#777" stroke-width="2"/>
+      <!-- branch 1 -->
+      <line x1="120" y1="30" x2="120" y2="60" stroke="#777" stroke-width="2"/>
+      <circle cx="120" cy="80" r="14" fill="#fff" stroke="#777" stroke-width="2"/>
+      <line x1="111" y1="71" x2="129" y2="89" stroke="#777" stroke-width="1.5"/>
+      <line x1="129" y1="71" x2="111" y2="89" stroke="#777" stroke-width="1.5"/>
+      <line x1="120" y1="94" x2="120" y2="130" stroke="#777" stroke-width="2"/>
+      <!-- branch 2 -->
+      <line x1="200" y1="30" x2="200" y2="60" stroke="#777" stroke-width="2"/>
+      <circle cx="200" cy="80" r="14" fill="#fff" stroke="#777" stroke-width="2"/>
+      <line x1="191" y1="71" x2="209" y2="89" stroke="#777" stroke-width="1.5"/>
+      <line x1="209" y1="71" x2="191" y2="89" stroke="#777" stroke-width="1.5"/>
+      <line x1="200" y1="94" x2="200" y2="130" stroke="#777" stroke-width="2"/>
+      <text x="160" y="150" font-size="7" fill="#777" text-anchor="middle">Same voltage across each branch</text>
+    </svg>
+  </div>
+
+  <table class="mat-table">
+    <tr><th>Quantity</th><th>Rule in parallel</th></tr>
+    <tr><td>Current</td><td>SPLITS at junctions — more through the lower-resistance branch</td></tr>
+    <tr><td>Voltage</td><td>SAME across all branches (= source voltage)</td></tr>
+    <tr><td>Resistance</td><td>Total LESS than any single branch</td></tr>
+  </table>
+
+  <ul class="mat-list">
+    <li>Each branch gets FULL voltage → components work at full power</li>
+    <li>If one branch fails → OTHER branches keep working</li>
+  </ul>
+
+  <div class="key-box"><strong>Real-world:</strong> Household wiring — every room/appliance gets the full 230V independently. If one light breaks, others stay on.</div>
+
+  <div class="remember-box">💡 Remember: Parallel = multiple branches. Voltage SAME across every branch. Current SPLITS. If one bulb fails → others stay ON. That's why household wiring is parallel.</div>
+`,
+
+'3-4': `
+  <p class="mat-intro">Understanding the differences between series and parallel circuits is crucial for exam questions. Study this comparison carefully.</p>
+
+  <table class="mat-table">
+    <tr><th>Feature</th><th>Series</th><th>Parallel</th></tr>
+    <tr><td>Current</td><td>Same throughout</td><td>Splits at junctions</td></tr>
+    <tr><td>Voltage</td><td>Shared between components</td><td>Same across all branches</td></tr>
+    <tr><td>Total resistance</td><td>Sum of all (R₁+R₂+…)</td><td>Less than smallest branch</td></tr>
+    <tr><td>If one fails</td><td>All components stop</td><td>Others keep working</td></tr>
+    <tr><td>Bulb brightness</td><td>Dimmer (voltage shared)</td><td>Normal (full voltage each)</td></tr>
+    <tr><td>Real-world use</td><td>Old fairy lights</td><td>Household wiring</td></tr>
+  </table>
+
+  <div class="mat-h">When is each used?</div>
+  <ul class="mat-list">
+    <li><strong>SERIES:</strong> simple on/off switches controlling a whole circuit, or when all components should stop together</li>
+    <li><strong>PARALLEL:</strong> household appliances and lighting — where each device must work independently at full power</li>
+  </ul>
+
+  <div class="tip-box">✅ Tip: Adding components in PARALLEL REDUCES total resistance (more paths = easier flow). Adding in SERIES INCREASES total resistance.</div>
+
+  <div class="remember-box">💡 Remember: Series = same current, shared voltage, all or nothing. Parallel = split current, same voltage, independent branches.</div>
+`,
+
+'3-5': `
+  <p class="mat-intro">Circuits are drawn using standard symbols so any engineer or scientist anywhere in the world can understand them.</p>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 280 280" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <!-- col 1 -->
+      <g stroke="#4A3F55" stroke-width="2">
+        <line x1="20" y1="20" x2="40" y2="20"/><line x1="40" y1="12" x2="40" y2="28"/><line x1="48" y1="16" x2="48" y2="24" stroke-width="3"/><line x1="48" y1="20" x2="68" y2="20"/>
+      </g>
+      <text x="44" y="40" font-size="8" fill="#555" text-anchor="middle">Cell</text>
+      <g stroke="#4A3F55" stroke-width="2">
+        <line x1="20" y1="68" x2="34" y2="68"/><line x1="34" y1="60" x2="34" y2="76"/><line x1="40" y1="64" x2="40" y2="72" stroke-width="3"/><line x1="46" y1="60" x2="46" y2="76"/><line x1="52" y1="64" x2="52" y2="72" stroke-width="3"/><line x1="52" y1="68" x2="68" y2="68"/>
+      </g>
+      <text x="44" y="90" font-size="8" fill="#555" text-anchor="middle">Battery</text>
+      <circle cx="44" cy="118" r="11" fill="none" stroke="#4A3F55" stroke-width="2"/>
+      <line x1="36" y1="110" x2="52" y2="126" stroke="#4A3F55" stroke-width="1.5"/><line x1="52" y1="110" x2="36" y2="126" stroke="#4A3F55" stroke-width="1.5"/>
+      <text x="44" y="142" font-size="8" fill="#555" text-anchor="middle">Bulb</text>
+      <rect x="26" y="162" width="36" height="14" fill="none" stroke="#4A3F55" stroke-width="2"/>
+      <text x="44" y="190" font-size="8" fill="#555" text-anchor="middle">Resistor</text>
+      <rect x="26" y="212" width="36" height="14" fill="none" stroke="#4A3F55" stroke-width="2"/>
+      <line x1="22" y1="230" x2="62" y2="206" stroke="#4A3F55" stroke-width="1.5"/><polygon points="62,206 56,206 60,212" fill="#4A3F55"/>
+      <text x="44" y="244" font-size="8" fill="#555" text-anchor="middle">Variable resistor</text>
+      <!-- col 2 -->
+      <circle cx="200" cy="20" r="11" fill="none" stroke="#4A3F55" stroke-width="2"/>
+      <text x="200" y="24" font-size="9" fill="#4A3F55" text-anchor="middle" font-weight="bold">A</text>
+      <text x="200" y="44" font-size="8" fill="#555" text-anchor="middle">Ammeter</text>
+      <circle cx="200" cy="68" r="11" fill="none" stroke="#4A3F55" stroke-width="2"/>
+      <text x="200" y="72" font-size="9" fill="#4A3F55" text-anchor="middle" font-weight="bold">V</text>
+      <text x="200" y="90" font-size="8" fill="#555" text-anchor="middle">Voltmeter</text>
+      <g stroke="#4A3F55" stroke-width="2">
+        <line x1="176" y1="118" x2="192" y2="118"/><line x1="192" y1="118" x2="208" y2="108"/><circle cx="192" cy="118" r="1.5" fill="#4A3F55"/><line x1="208" y1="118" x2="224" y2="118"/>
+      </g>
+      <text x="200" y="142" font-size="8" fill="#555" text-anchor="middle">Switch (open)</text>
+      <g stroke="#4A3F55" stroke-width="2">
+        <line x1="176" y1="168" x2="224" y2="168"/><circle cx="192" cy="168" r="1.5" fill="#4A3F55"/>
+      </g>
+      <text x="200" y="190" font-size="8" fill="#555" text-anchor="middle">Switch (closed)</text>
+      <line x1="176" y1="216" x2="224" y2="216" stroke="#4A3F55" stroke-width="2"/>
+      <text x="200" y="240" font-size="8" fill="#555" text-anchor="middle">Wire</text>
+    </svg>
+  </div>
+
+  <div class="key-box">
+    <strong>Memory tips:</strong>
+    <ul class="mat-list" style="color:inherit;margin-top:4px;">
+      <li>A = Ammeter goes IN SERIES (A = "along the line")</li>
+      <li>V = Voltmeter goes IN PARALLEL (V = "across")</li>
+      <li>Resistor = rectangle because it blocks/opposes current</li>
+      <li>A circle = an instrument that MEASURES something</li>
+    </ul>
+  </div>
+
+  <div class="remember-box">💡 Remember: Learn these by heart. Most tested: cell, bulb, ammeter (series), voltmeter (parallel), resistor, switch.</div>
+`,
+
+/* ═══ UNIT 4: GENETICS ═══ */
+
+'4-0': `
+  <p class="mat-intro"><strong>DNA</strong> (Deoxyribonucleic acid) stores all the genetic information needed for the growth, function, and reproduction of every living organism. It has a distinctive double helix structure.</p>
+
+  <ul class="mat-list">
+    <li>Full name: DeoxyriboNucleic Acid</li>
+    <li>Structure: double helix — a twisted ladder</li>
+    <li>Basic units: nucleotides (sugar + phosphate + base)</li>
+    <li>Location: inside the nucleus of almost every cell</li>
+    <li>Length: ~2 metres of DNA in one human cell — tightly coiled to fit</li>
+  </ul>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 220 220" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <path d="M70,10 Q110,40 70,70 Q30,100 70,130 Q110,160 70,190 Q40,205 70,210" fill="none" stroke="#C9A4E8" stroke-width="3"/>
+      <path d="M150,10 Q110,40 150,70 Q190,100 150,130 Q110,160 150,190 Q180,205 150,210" fill="none" stroke="#C9A4E8" stroke-width="3"/>
+      <g stroke-width="6">
+        <line x1="78" y1="30" x2="142" y2="30" stroke="#F5A4B8"/>
+        <line x1="62" y1="60" x2="158" y2="60" stroke="#A4D4C9"/>
+        <line x1="70" y1="100" x2="150" y2="100" stroke="#F5A4B8"/>
+        <line x1="62" y1="140" x2="158" y2="140" stroke="#A4D4C9"/>
+        <line x1="78" y1="170" x2="142" y2="170" stroke="#F5A4B8"/>
+      </g>
+      <text x="86" y="33" font-size="7" fill="#fff" font-weight="bold">A</text><text x="130" y="33" font-size="7" fill="#fff" font-weight="bold">T</text>
+      <text x="70" y="63" font-size="7" fill="#fff" font-weight="bold">G</text><text x="146" y="63" font-size="7" fill="#fff" font-weight="bold">C</text>
+      <text x="78" y="103" font-size="7" fill="#fff" font-weight="bold">T</text><text x="138" y="103" font-size="7" fill="#fff" font-weight="bold">A</text>
+      <text x="70" y="143" font-size="7" fill="#fff" font-weight="bold">C</text><text x="146" y="143" font-size="7" fill="#fff" font-weight="bold">G</text>
+      <text x="86" y="173" font-size="7" fill="#fff" font-weight="bold">A</text><text x="130" y="173" font-size="7" fill="#fff" font-weight="bold">T</text>
+      <text x="110" y="208" font-size="8" fill="#7a5a9a" text-anchor="middle" font-weight="bold">Double Helix</text>
+      <text x="30" y="105" font-size="6" fill="#999" transform="rotate(-90 30,105)" text-anchor="middle">sugar-phosphate backbone</text>
+    </svg>
+  </div>
+
+  <div class="formula-display formula-sm">A ↔ T  (2 H-bonds)<br>G ↔ C  (3 H-bonds)</div>
+  <p class="mat-intro txt-center">These are called COMPLEMENTARY base pairs.</p>
+
+  <div class="key-box"><strong>Practice:</strong> If one strand reads A-T-G-C-C-A,<br>the complementary strand is <strong>T-A-C-G-G-T</strong>.</div>
+
+  <div class="remember-box">💡 Remember: A pairs with T. G pairs with C. They NEVER swap. A-T = 2 bonds, G-C = 3 bonds. You can work out the complementary strand of ANY DNA strand.</div>
+`,
+
+'4-1': `
+  <p class="mat-intro">These four terms are easy to confuse. Here's how they relate, from big to small.</p>
+
+  <div class="key-box">CHROMOSOME → contains many <strong>GENES</strong> → each gene has versions called <strong>ALLELES</strong> → an organism's combination of alleles = <strong>GENOTYPE</strong> → the visible result = <strong>PHENOTYPE</strong></div>
+
+  <table class="mat-table">
+    <tr><th>Term</th><th>Definition</th><th>Example</th></tr>
+    <tr><td>Gene</td><td>Section of DNA coding for a characteristic</td><td>Gene for eye colour</td></tr>
+    <tr><td>Allele</td><td>A different version of the same gene</td><td>Blue / brown eye allele</td></tr>
+    <tr><td>Genotype</td><td>The exact combination of alleles</td><td>BB, Bb, or bb</td></tr>
+    <tr><td>Phenotype</td><td>The observable characteristic</td><td>Blue or brown eyes</td></tr>
+  </table>
+
+  <div class="mat-h">Dominant vs Recessive</div>
+  <ul class="mat-list">
+    <li><strong>DOMINANT</strong> (capital, e.g. B): expressed even with only ONE copy</li>
+    <li><strong>RECESSIVE</strong> (lowercase, e.g. b): only expressed with TWO copies</li>
+  </ul>
+
+  <table class="mat-table">
+    <tr><th>Genotype</th><th>Type</th><th>Phenotype</th></tr>
+    <tr><td>BB</td><td>Homozygous dominant</td><td>Shows dominant trait</td></tr>
+    <tr><td>Bb</td><td>Heterozygous</td><td>Shows dominant trait (carrier)</td></tr>
+    <tr><td>bb</td><td>Homozygous recessive</td><td>Shows recessive trait</td></tr>
+  </table>
+
+  <div class="remember-box">💡 Remember: You can HAVE an allele without SHOWING it. A heterozygous person (Bb) shows the dominant phenotype but carries the recessive allele — and can pass it on.</div>
+`,
+
+'4-2': `
+  <p class="mat-intro"><strong>Chromosomes</strong> are thread-like structures made of DNA, found inside the nucleus. They carry all of an organism's genes.</p>
+
+  <ul class="mat-list">
+    <li>Human body cells: 46 chromosomes (23 PAIRS)</li>
+    <li>Human gametes (sperm/egg): 23 chromosomes — produced by MEIOSIS</li>
+    <li>At fertilisation: 23 + 23 = 46 → restored in the zygote</li>
+    <li>This keeps the chromosome number the same across generations</li>
+  </ul>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 240 130" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <g stroke-width="6" stroke-linecap="round">
+        <line x1="30" y1="20" x2="40" y2="60" stroke="#E8A4C8"/><line x1="40" y1="20" x2="30" y2="60" stroke="#E8A4C8"/>
+        <line x1="52" y1="20" x2="62" y2="60" stroke="#A4C9E8"/><line x1="62" y1="20" x2="52" y2="60" stroke="#A4C9E8"/>
+        <line x1="90" y1="20" x2="100" y2="60" stroke="#E8A4C8"/><line x1="100" y1="20" x2="90" y2="60" stroke="#E8A4C8"/>
+        <line x1="112" y1="20" x2="122" y2="60" stroke="#A4C9E8"/><line x1="122" y1="20" x2="112" y2="60" stroke="#A4C9E8"/>
+        <line x1="150" y1="20" x2="160" y2="60" stroke="#E8A4C8"/><line x1="160" y1="20" x2="150" y2="60" stroke="#E8A4C8"/>
+        <line x1="172" y1="20" x2="182" y2="60" stroke="#A4C9E8"/><line x1="182" y1="20" x2="172" y2="60" stroke="#A4C9E8"/>
+      </g>
+      <text x="46" y="74" font-size="7" fill="#777" text-anchor="middle">Pair 1</text>
+      <text x="106" y="74" font-size="7" fill="#777" text-anchor="middle">Pair 2</text>
+      <text x="166" y="74" font-size="7" fill="#777" text-anchor="middle">…23 pairs</text>
+      <rect x="20" y="36" width="6" height="8" fill="none"/>
+      <text x="120" y="92" font-size="7" fill="#c06090" text-anchor="middle">pink = from mother · blue = from father</text>
+      <text x="70" y="116" font-size="9" fill="#4A3F55" text-anchor="middle" font-weight="bold">Body cell: 46</text>
+      <text x="172" y="116" font-size="9" fill="#4A3F55" text-anchor="middle" font-weight="bold">Gamete: 23</text>
+    </svg>
+  </div>
+
+  <div class="mat-h">Karyotype</div>
+  <p class="mat-intro">An image of ALL chromosomes from ONE cell, arranged in pairs and ordered by size. Used by scientists/doctors to study chromosome abnormalities.</p>
+
+  <div class="step-flow">
+    <div class="step-item"><span class="step-num">1</span><span>Collect dividing cells (blood, foetal cells, etc.).</span></div>
+    <div class="step-item"><span class="step-num">2</span><span>Add chemicals to STOP cell division — chromosomes stay visible.</span></div>
+    <div class="step-item"><span class="step-num">3</span><span>Stain chromosomes with a dye.</span></div>
+    <div class="step-item"><span class="step-num">4</span><span>Photograph under a microscope.</span></div>
+    <div class="step-item"><span class="step-num">5</span><span>Arrange the images into matching pairs by size.</span></div>
+  </div>
+
+  <div class="mat-h">Uses of karyotypes</div>
+  <ul class="mat-list">
+    <li>Identify abnormalities (e.g. Down syndrome = extra chromosome 21, "trisomy 21")</li>
+    <li>Detect sex chromosome abnormalities</li>
+    <li>Check foetal development during pregnancy (prenatal testing)</li>
+  </ul>
+
+  <div class="remember-box">💡 Remember: Body cells have 46 (23 pairs). Gametes have 23. Meiosis halves the number; fertilisation restores it to 46. A karyotype shows all 46 arranged in pairs.</div>
+`,
+
+'4-3': `
+  <p class="mat-intro"><strong>Variation</strong> means differences in characteristics between individuals of the SAME SPECIES. Without it, all members would be identical and equally vulnerable.</p>
+
+  <div class="mat-h">1️⃣ Inherited variation</div>
+  <ul class="mat-list">
+    <li>Caused by genes inherited from parents</li>
+    <li>Present from birth; does NOT change during life</li>
+    <li>Examples: blood group, eye colour, earlobe attachment, freckles</li>
+  </ul>
+
+  <div class="mat-h">2️⃣ Environmental variation</div>
+  <ul class="mat-list">
+    <li>Caused by conditions during the organism's life</li>
+    <li>Does NOT change the genes (not heritable)</li>
+    <li>Examples: scar from injury, tan from sun, muscles from exercise, language spoken</li>
+  </ul>
+
+  <div class="mat-h">3️⃣ Combined (inherited + environmental)</div>
+  <ul class="mat-list">
+    <li>Genes set the RANGE; environment determines WHERE within it</li>
+    <li>HEIGHT: genes set a range; nutrition/health decide final height</li>
+    <li>SKIN TONE: genes set base pigment; sunlight affects melanin</li>
+    <li>FINGERPRINTS: genes give a template; womb conditions affect exact pattern (why identical twins differ!)</li>
+  </ul>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 260 140" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="70" r="55" fill="#E8A4C8" opacity="0.4"/>
+      <circle cx="160" cy="70" r="55" fill="#A4C9E8" opacity="0.4"/>
+      <text x="72" y="60" font-size="8" fill="#7a2a5a" text-anchor="middle" font-weight="bold">Inherited</text>
+      <text x="72" y="74" font-size="6.5" fill="#7a2a5a" text-anchor="middle">eye colour</text>
+      <text x="72" y="84" font-size="6.5" fill="#7a2a5a" text-anchor="middle">blood group</text>
+      <text x="188" y="60" font-size="8" fill="#2a4a7a" text-anchor="middle" font-weight="bold">Environmental</text>
+      <text x="188" y="74" font-size="6.5" fill="#2a4a7a" text-anchor="middle">scars</text>
+      <text x="188" y="84" font-size="6.5" fill="#2a4a7a" text-anchor="middle">tan</text>
+      <text x="130" y="62" font-size="7" fill="#4A3F55" text-anchor="middle" font-weight="bold">Both</text>
+      <text x="130" y="74" font-size="6" fill="#4A3F55" text-anchor="middle">height</text>
+      <text x="130" y="84" font-size="6" fill="#4A3F55" text-anchor="middle">skin tone</text>
+    </svg>
+  </div>
+
+  <div class="mat-h">Why variation matters</div>
+  <ul class="mat-list">
+    <li>Helps species survive changing environments</li>
+    <li>Individuals with beneficial variations more likely to survive and reproduce</li>
+    <li>Species with little variation are more vulnerable to disease/change</li>
+  </ul>
+
+  <div class="remember-box">💡 Remember: Inherited variation = in your GENES. Environmental = caused by your LIFE EXPERIENCES. Some traits are BOTH. Scars and muscles are NOT inherited; blood group IS.</div>
+`,
+
+'4-4': `
+  <p class="mat-intro">A <strong>mutation</strong> is any change in the DNA of an organism. Mutations can be random or triggered by external factors.</p>
+
+  <div class="mat-h">Causes of mutations</div>
+  <ul class="mat-list">
+    <li>Spontaneous (random) — by chance during DNA copying</li>
+    <li>UV radiation from sunlight — damages DNA (linked to skin cancer)</li>
+    <li>Ionising radiation (X-rays, gamma rays) — breaks/alters DNA</li>
+    <li>Chemical mutagens (in cigarettes, food, environment)</li>
+  </ul>
+
+  <table class="mat-table">
+    <tr><th>Type</th><th>What changes</th><th>Scale</th></tr>
+    <tr><td>Gene mutation</td><td>One or a few base pairs in the DNA sequence</td><td>Small — one gene</td></tr>
+    <tr><td>Chromosomal mutation</td><td>A whole section/chromosome deleted, duplicated, rearranged</td><td>Large — many genes</td></tr>
+  </table>
+
+  <div class="mat-h">Effects — most mutations are harmless!</div>
+  <ul class="mat-list">
+    <li>Most DNA is NON-CODING → no effect</li>
+    <li>Some create NEW ALLELES → can help species adapt (beneficial)</li>
+    <li>Some are HARMFUL → cause disease or stop development
+      <ul><li>e.g. thalassaemia, sickle cell anaemia, cystic fibrosis</li></ul>
+    </li>
+    <li>Down syndrome = a CHROMOSOMAL mutation (extra chromosome 21), not a gene mutation</li>
+  </ul>
+
+  <div class="remember-box">💡 Remember: Most mutations have NO effect (non-coding DNA). Some create new alleles (can be beneficial). Some cause disease (harmful). Mutations are the source of genetic variation — they drive evolution.</div>
+`,
+
+'4-5': `
+  <p class="mat-intro">The biological sex of a baby is determined by the sex chromosomes from the <strong>FATHER</strong> (via sperm), not the mother.</p>
+
+  <ul class="mat-list">
+    <li>Pair 23 = the sex chromosomes</li>
+    <li>X chromosome: larger, more genes</li>
+    <li>Y chromosome: smaller, fewer genes</li>
+  </ul>
+
+  <table class="mat-table">
+    <tr><th>Combination</th><th>Result</th></tr>
+    <tr><td>XX</td><td>Biological female</td></tr>
+    <tr><td>XY</td><td>Biological male</td></tr>
+  </table>
+
+  <ul class="mat-list">
+    <li>Egg cells ALWAYS contain X</li>
+    <li>Sperm can contain EITHER X or Y</li>
+    <li>X sperm + egg = XX = female · Y sperm + egg = XY = male</li>
+    <li>Therefore the SPERM (father) determines the child's sex</li>
+  </ul>
+
+  <div class="vis-wrap">
+    <svg viewBox="0 0 260 160" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <text x="50" y="20" font-size="10" fill="#E8A4C8" text-anchor="middle" font-weight="bold">Mother XX</text>
+      <text x="210" y="20" font-size="10" fill="#A4C9E8" text-anchor="middle" font-weight="bold">Father XY</text>
+      <line x1="50" y1="26" x2="50" y2="50" stroke="#999"/>
+      <text x="50" y="64" font-size="10" fill="#555" text-anchor="middle" font-weight="bold">X</text>
+      <line x1="210" y1="26" x2="190" y2="50" stroke="#999"/>
+      <line x1="210" y1="26" x2="230" y2="50" stroke="#999"/>
+      <text x="190" y="64" font-size="10" fill="#555" text-anchor="middle" font-weight="bold">X</text>
+      <text x="230" y="64" font-size="10" fill="#555" text-anchor="middle" font-weight="bold">Y</text>
+      <line x1="50" y1="70" x2="110" y2="100" stroke="#E8A4C8"/>
+      <line x1="190" y1="70" x2="110" y2="100" stroke="#A4C9E8"/>
+      <line x1="50" y1="70" x2="170" y2="100" stroke="#E8A4C8"/>
+      <line x1="230" y1="70" x2="170" y2="100" stroke="#A4C9E8"/>
+      <rect x="80" y="104" width="60" height="24" rx="6" fill="#E8A4C8" opacity="0.5"/>
+      <text x="110" y="120" font-size="9" fill="#7a2a5a" text-anchor="middle" font-weight="bold">XX female 50%</text>
+      <rect x="148" y="104" width="60" height="24" rx="6" fill="#A4C9E8" opacity="0.5"/>
+      <text x="178" y="120" font-size="9" fill="#2a4a7a" text-anchor="middle" font-weight="bold">XY male 50%</text>
+    </svg>
+  </div>
+
+  <div class="mat-h">Punnett square — Thalassaemia (Tt × Tt)</div>
+  <p class="mat-intro">T = healthy allele, t = faulty allele. Both parents are carriers.</p>
+  <table class="punnett">
+    <tr><th></th><th>T</th><th>t</th></tr>
+    <tr><th>T</th><td class="pcell">TT</td><td class="pcell">Tt</td></tr>
+    <tr><th>t</th><td class="pcell">Tt</td><td class="pcell">tt</td></tr>
+  </table>
+
+  <table class="mat-table">
+    <tr><th>Genotype</th><th>Probability</th><th>Phenotype</th></tr>
+    <tr><td>TT</td><td>25%</td><td>Healthy, non-carrier</td></tr>
+    <tr><td>Tt</td><td>50%</td><td>Healthy, CARRIER</td></tr>
+    <tr><td>tt</td><td>25%</td><td>Affected by thalassaemia</td></tr>
+  </table>
+
+  <div class="remember-box">💡 Remember: The SPERM determines sex — not the egg. A Tt × Tt cross gives 25% TT, 50% Tt (carrier), 25% tt (affected). It is NEVER the mother's "fault" — the father's sperm provides the Y chromosome.</div>
+`
+
+};
+
+/* ──────────────────────────────────────────────────
    STATE & STORAGE
 ────────────────────────────────────────────────── */
 
